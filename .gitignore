@@ -1,0 +1,12 @@
+# Linux backup files
+*~
+
+# Archives
+*.gz
+*.tgz
+*.zip
+
+# Vim swap files
+*.sw[po]
+
+/vendor/
