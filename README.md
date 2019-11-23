@@ -10,7 +10,7 @@ Normally, you would modify the database via some database migration tool. But in
 
 ## Usage
 
-```
+```php
 <?php
 use App\Collection\DummyCurrencyCollection;
 use App\Database\DatabaseConnectionInterface;
