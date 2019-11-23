@@ -10,8 +10,15 @@ interface DatabaseConnectionInterface
 {
     /**
      * Executes a raw statement
+     *
+     * @param string $statement
      */
     public function exec(string $statement): void;
 
+    /**
+     * Executes a raw statement and returns the result set
+     *
+     * @param string $statement
+     */
     public function query(string $statement): \Traversable;
 }

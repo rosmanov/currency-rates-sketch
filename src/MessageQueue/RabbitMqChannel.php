@@ -9,6 +9,9 @@ use PhpAmqpLib\Exception\AMQPChannelClosedException;
 use PhpAmqpLib\Message\AMQPMessage;
 use Psr\Log\LoggerInterface;
 
+/**
+ * Represents a channel of the RabbitMQ broker.
+ */
 class RabbitMqChannel implements MessageQueueChannelInterface
 {
     /**
@@ -17,11 +20,15 @@ class RabbitMqChannel implements MessageQueueChannelInterface
     private $channel;
 
     /**
+     * RabbitMQ exchange
+     *
      * @var string
      */
     private $exchange;
 
     /**
+     * RabbitMQ routing key
+     *
      * @var string
      */
     private $routingKey;

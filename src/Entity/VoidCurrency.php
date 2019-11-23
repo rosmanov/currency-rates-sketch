@@ -4,10 +4,11 @@ declare(strict_types=1);
 namespace App\Entity;
 
 /**
- * Represents the absence of currency entitiy. Can be used as a sentinel, or a
- * replacement for the NULL value.
+ * Represents the absence of currency entitiy.
+ *
+ * Can be used as a sentinel, or a replacement for the NULL value.
  */
-class VoidCurrency implements CurrencyInterface
+final class VoidCurrency implements CurrencyInterface
 {
     /**
      * {@inheritDoc}

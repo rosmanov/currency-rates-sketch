@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
+/**
+ * Not quite an object, just a basic currency DTO.
+ */
 class BasicCurrencyRate implements CurrencyRateInterface
 {
     /**
@@ -59,6 +62,8 @@ class BasicCurrencyRate implements CurrencyRateInterface
      */
     public function isValid(): bool
     {
-        return $this->value > 0.0;
+        return $this->value > 0.0
+            && $this->fromCurrency->isValid()
+            && $this->toCurrency->isValid();
     }
 }

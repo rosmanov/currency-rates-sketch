@@ -3,6 +3,10 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
+/**
+ * A currency entity constructible from an associative array. Can be useful for
+ * parsing the rows fetched from database (poor man's hydration).
+ */
 class ArrayBasedCurrency implements CurrencyInterface {
     /**
      * @var string

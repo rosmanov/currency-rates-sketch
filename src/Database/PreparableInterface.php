@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace App\Database;
 
+/**
+ * Support for prepared statements and statement parameter binding.
+ */
 interface PreparableInterface
 {
     /**

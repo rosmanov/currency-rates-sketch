@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace App\Database;
 
 /**
+ * Database connection based on the \PDO extension.
+ *
  * @todo Consider logging (inject LoggerInterface?)
  */
 class PdoDatabaseConnection extends PreparableSqlDatabaseInterface
@@ -18,6 +20,9 @@ class PdoDatabaseConnection extends PreparableSqlDatabaseInterface
      */
     private $preparedStatement;
 
+    /**
+     * @param \PDO $pdo
+     */
     public function __construct(\PDO $pdo)
     {
         $this->pdo = $pdo;
@@ -44,6 +49,9 @@ class PdoDatabaseConnection extends PreparableSqlDatabaseInterface
         return $this->pdo->quote($string);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function query(string $statement): \Traversable
     {
         return $this->pdo->query($statement);

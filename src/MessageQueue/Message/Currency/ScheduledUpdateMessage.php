@@ -7,6 +7,9 @@ use App\Entity\CurrencyInterface;
 use App\Entity\VoidCurrency;
 use App\MessageQueue\Message\MessageInterface;
 
+/**
+ * Message for currency rate updates.
+ */
 class ScheduledUpdateMessage implements MessageInterface
 {
     private const FROM_CURRENCY_KEY = 'fromCurrency';
@@ -16,6 +19,7 @@ class ScheduledUpdateMessage implements MessageInterface
      * @var CurrencyInterface
      */
     private $fromCurrency;
+
     /**
      * @var CurrencyInterface
      */

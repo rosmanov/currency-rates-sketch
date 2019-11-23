@@ -6,6 +6,9 @@ namespace App\Network;
 use GuzzleHttp\Client;
 use Psr\Http\Message\RequestInterface;
 
+/**
+ * HTTP client based on the Guzzle library.
+ */
 class GuzzleNetworkClient implements NetworkClientInterface
 {
     /**

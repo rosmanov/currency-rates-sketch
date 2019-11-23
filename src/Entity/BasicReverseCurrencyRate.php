@@ -3,6 +3,12 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
+/**
+ * A basic currency DTO with the logic reversing conversion.
+ *
+ * So the "from" currency becomes "to" and vice versa, and
+ * the rate value is flipped (1 / original rate value).
+ */
 class BasicReverseCurrencyRate implements CurrencyRateInterface
 {
     /**

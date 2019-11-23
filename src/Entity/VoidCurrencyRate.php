@@ -7,12 +7,13 @@ namespace App\Entity;
  * Represents the absence of the currency rate
  * (Null object pattern)
  */
-class VoidCurrencyRate implements CurrencyRateInterface
+final class VoidCurrencyRate implements CurrencyRateInterface
 {
     /**
      * @var CurrencyInterface
      */
     private $currency;
+
     /**
      * @var float
      */

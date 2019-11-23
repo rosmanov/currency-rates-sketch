@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace App\Collection;
 
+use App\Entity\CurrencyInterface;
+use App\Entity\VoidCurrency;
+
 class DummyCurrencyCollection implements CurrencyCollectionInterface
 {
     /**
@@ -28,5 +31,21 @@ class DummyCurrencyCollection implements CurrencyCollectionInterface
     public function asArray(): array
     {
         return [];
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function count()
+    {
+        return 0;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function findByCode(string $code, CurrencyInterface $default): CurrencyInterface
+    {
+        return new VoidCurrency();
     }
 }

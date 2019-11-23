@@ -8,6 +8,9 @@ use PhpAmqpLib\Message\AMQPMessage;
 
 class RabbitMqUpdateConsumer extends AbstractRabbitMqConsumerInterface
 {
+    /**
+     * {@inheritDoc}
+     */
     protected function handleRabbitMq(AMQPMessage $message)
     {
         // XXX handle message
